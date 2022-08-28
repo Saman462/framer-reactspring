@@ -1,6 +1,7 @@
 import "./App.css";
 import sky from "./BS.png";
 import { motion, useTransform, useScroll } from "framer-motion";
+
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import lampright from "./lampr.png";
 import lamp2right from "./lamp2r.png";
@@ -13,13 +14,14 @@ import sign from "./roadsign.png";
 import clouds from "./Clouds.png";
 function App() {
   const { scrollY } = useScroll();
-  const scaleRoad = useTransform(scrollY, [0, 500], [1, 2]);
+  const scaleRoad = useTransform(scrollY, [0, 500], [1.3, 1]);
+  const scaleme = useTransform(scrollY, [0, 500], [0.6, 1]);
   return (
     <div>
       <Parallax
         pages={8}
         style={{
-          overflow: "auto",
+          overflow: "visible",
           top: "0",
           left: "0",
           width: "100%",
@@ -27,53 +29,77 @@ function App() {
           backgroundImage: { sky },
         }}
       >
-        <ParallaxLayer offset={0} speed={1} sticky={{ start: 0.28, end: 0.83 }}>
+        <ParallaxLayer
+          offset={0}
+          speed={-9999999999999}
+          sticky={{ start: 0.2, end: 0.88 }}
+        >
           <img id="last" src={last}></img>
         </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={2} sticky={{ start: 0.26, end: 0.82 }}>
+        <ParallaxLayer
+          offset={0}
+          speed={-888888888}
+          sticky={{ start: 0.2, end: 0.88 }}
+        >
           <img src={middle} id="middle"></img>
         </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={3} sticky={{ start: 0.25, end: 0.88 }}>
+        <ParallaxLayer
+          offset={0}
+          speed={0.8}
+          sticky={{ start: 0.2, end: 0.88 }}
+        >
           <img src={first} id="first"></img>
         </ParallaxLayer>
         <ParallaxLayer
           offset={0}
-          speed={-10}
-          factor={0.4}
-          sticky={{ start: 0.3, end: 0.9 }}
+          speed={-9999999999}
+          factor={0}
+          sticky={{ start: 0.2, end: 0.88 }}
         >
-          <img src={road} id="road"></img>
+          <motion.img
+            src={road}
+            style={{ scale: scaleRoad }}
+            id="road"
+          ></motion.img>
         </ParallaxLayer>
-        <ParallaxLayer
+        <motion.ParallaxLayer
           offset={0}
-          speed={-20}
-          sticky={{ start: 0.35, end: 0.92 }}
+          speed={3}
+          sticky={{ start: 0.2, end: 0.88 }}
         >
-          <img src={sign} id="sign"></img>
+          <motion.img
+            src={sign}
+            id="sign"
+            style={{ scale: scaleme }}
+          ></motion.img>
+        </motion.ParallaxLayer>
+        {/* <ParallaxLayer offset={0} speed={0} sticky={{ start: 0.2, end: 0.88 }}>
+          <motion.img
+            src={lampright}
+            id="lampright"
+            style={{ scale: scaleme }}
+          ></motion.img> 
+        </ParallaxLayer>*/}
+        <ParallaxLayer offset={0} speed={5} sticky={{ start: 0.2, end: 0.88 }}>
+          <motion.img
+            src={lamp2right}
+            id="lamp2right"
+            style={{ scale: scaleme }}
+          ></motion.img>
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={0}
-          speed={-20}
-          sticky={{ start: 0.31, end: 0.91 }}
-        >
-          <img src={lampright} id="lampright"></img>
-        </ParallaxLayer>
-        <ParallaxLayer
-          offset={0}
-          speed={-20}
-          sticky={{ start: 0.35, end: 0.95 }}
-        >
-          <img src={lamp2right} id="lamp2right"></img>
-        </ParallaxLayer>
-        <ParallaxLayer offset={0} speed={5} sticky={{ start: 0.06, end: 0.8 }}>
+        <ParallaxLayer offset={0.1} speed={9} sticky={{ start: 0.2, end: 0.8 }}>
           <img src={clouds} id="clouds"></img>
         </ParallaxLayer>
         <ParallaxLayer
           offset={0}
-          speed={-20}
-          sticky={{ start: 0.37, end: 0.92 }}
+          speed={1.8}
+          sticky={{ start: 0.2, end: 0.88 }}
         >
-          <img src={lampleft} id="lampleft"></img>
+          <motion.img
+            src={lampleft}
+            id="lampleft"
+            style={{ scale: scaleme }}
+          ></motion.img>
         </ParallaxLayer>
         <ParallaxLayer offset={2.1}>
           <div>
