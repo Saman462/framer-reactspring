@@ -14,8 +14,10 @@ import sign from "./roadsign.png";
 import clouds from "./Clouds.png";
 function App() {
   const { scrollY } = useScroll();
-  const scaleRoad = useTransform(scrollY, [0, 500], [1.3, 1]);
-  const scaleme = useTransform(scrollY, [0, 500], [0.6, 1]);
+  const scaleRoad = useTransform(scrollY, [0, 500], [1.3, 1.2]);
+  // const scaleRoad = useTransform(scrollY, [0, 500], [1.3, 1.2]);
+  const scaleme = useTransform(scrollY, [0, 500], [1, 1]);
+  // const scaleme = useTransform(scrollY, [0, 500], [1, 1]);
   return (
     <div>
       <Parallax
@@ -58,7 +60,7 @@ function App() {
         >
           <motion.img
             src={road}
-            style={{ scale: scaleRoad }}
+            style={{ scaleY: scaleRoad }}
             id="road"
           ></motion.img>
         </ParallaxLayer>
