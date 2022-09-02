@@ -31,11 +31,7 @@ function App() {
           backgroundImage: { sky },
         }}
       >
-        <ParallaxLayer
-          offset={0}
-          speed={-9999999999999}
-          sticky={{ start: 0.2, end: 0.88 }}
-        >
+        <ParallaxLayer offset={0} speed={0} sticky={{ start: 0.2, end: 0.88 }}>
           <img id="last" src={last}></img>
         </ParallaxLayer>
         <ParallaxLayer
@@ -66,7 +62,7 @@ function App() {
         </ParallaxLayer>
         <motion.ParallaxLayer
           offset={0}
-          speed={3}
+          speed={5}
           sticky={{ start: 0.2, end: 0.88 }}
         >
           <motion.img
@@ -94,7 +90,7 @@ function App() {
         </ParallaxLayer>
         <ParallaxLayer
           offset={0}
-          speed={1.8}
+          speed={3.6}
           sticky={{ start: 0.2, end: 0.88 }}
         >
           <motion.img

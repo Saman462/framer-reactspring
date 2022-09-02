@@ -6,74 +6,77 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: paleturquoise;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .div {
-  position: relative;
+  position: absolute;
+  display: flex;
 }
 #first {
-  position: absolute;
-  bottom: 620px;
+  position: relative;
+  margin-top: 60px;
   width: 100%;
   height: 600px;
 }
 #middle {
-  position: absolute;
-  bottom: 440px;
+  position: relative;
+  margin-top: 120px;
   height: 700px;
   width: 100%;
 }
 #last {
   width: 100%;
-  position: absolute;
-  top: 200px;
+  position: relative;
+  margin-top: 300px;
   height: 300px;
 }
 #road {
-  position: absolute;
+  position: relative;
   z-index: 1100;
-  top: 42%;
+  margin-top: 690px;
   width: 100%;
   height: 710px;
 }
 
 #clouds {
-  position: absolute;
-  bottom: 1130px;
+  position: relative;
+  bottom: 90px;
   height: 200px;
   width: 100%;
   z-index: 800;
 }
 
 #sign {
-  position: relative;
-  top: 650px;
-  left: 10px;
-  width: 300px;
-  height: 200px;
+  position: absolute;
+  margin-top: 810px;
+  margin-left: 68px;
+  width: 13%;
+  height: 18%;
   z-index: 5019;
 }
 #lampright {
-  position: fixed;
-  top: 32%;
-  right: 38.5%;
-  height: 100px;
+  position: relative;
+  margin-top: 32%;
+  margin-right: 38.5%;
+  height: 10%;
   width: 50px;
   z-index: 2019;
 }
 #lamp2right {
-  position: fixed;
-  top: 12%;
-  right: 4%;
-  height: 580px;
-  width: 150px;
+  position: relative;
+  margin-top: 200px;
+  margin-left: 2260px;
+  height: 60%;
+  width: 6%;
   z-index: 2019;
 }
 #lampleft {
-  position: fixed;
-  top: 25%;
-  left: 20%;
-  height: 300px;
-  width: 110px;
+  position: relative;
+  margin-top: 450px;
+  margin-left: 700px;
+  height: 25%;
+  width: 4%;
   z-index: 2019;
 }
 
