@@ -1,80 +1,104 @@
+#root {
+  height: 100%;
+  width: 100%;
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
   background-color: paleturquoise;
   overflow-x: hidden;
   overflow-y: auto;
 }
-.div {
-  position: absolute;
-  display: flex;
-}
+
 #first {
   position: relative;
-  margin-top: 60px;
+  height: 500px;
   width: 100%;
-  height: 600px;
 }
 #middle {
   position: relative;
-  margin-top: 120px;
-  height: 700px;
+  /* margin-top: 120px; */
+  height: 600px;
   width: 100%;
 }
 #last {
   width: 100%;
   position: relative;
-  margin-top: 300px;
+  /* margin-top: 300px; */
   height: 300px;
 }
 #road {
   position: relative;
   z-index: 1100;
-  margin-top: 690px;
+  /* margin-top: 790px; */
   width: 100%;
-  height: 710px;
+  height: 600px;
 }
 
 #clouds {
-  position: relative;
-  bottom: 90px;
+  position: absolute;
   height: 200px;
   width: 100%;
-  z-index: 800;
+  display: flex;
+  margin-bottom: 100px;
 }
 
 #sign {
-  position: absolute;
-  margin-top: 810px;
-  margin-left: 68px;
+  /* position: fixed; */
+  /* margin-top: 22%; */
+  /* margin-left: 5%; */
   width: 13%;
-  height: 18%;
-  z-index: 5019;
+  height: 20%;
+  /* height: 20%; */
+  /* z-index: 5019; */
 }
 #lampright {
-  position: relative;
+  position: fixed;
   margin-top: 32%;
   margin-right: 38.5%;
   height: 10%;
   width: 50px;
   z-index: 2019;
 }
-#lamp2right {
-  position: relative;
-  margin-top: 200px;
-  margin-left: 2260px;
-  height: 60%;
-  width: 6%;
-  z-index: 2019;
+/* #lamp2right {
+  
+  /* margin-top: 200px; */
+/* margin-left: 2260px; */
+/* display: flex; */
+/* margin-right: 80px; */
+/* justify-content: flex-end; */
+/* align-items: flex-end; */
+/* height: 60%; */
+/* width: 6%; */
+/* z-index: 2019; }*/
+.navbar {
+  position: sticky;
+  background-color: black;
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+  color: whitesmoke;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav-links li {
+  margin: 0 30px;
 }
 #lampleft {
-  position: relative;
-  margin-top: 450px;
-  margin-left: 700px;
+  position: fixed;
+  margin-top: 540px;
+  margin-left: 760px;
   height: 25%;
   width: 4%;
   z-index: 2019;
